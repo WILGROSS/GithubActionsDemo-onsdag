@@ -26,3 +26,4 @@ jobs:
       uses: test-summary/action@v2
       with:
         paths: "**/target/surefire-reports/TEST-*.xml"
+      if: always()
