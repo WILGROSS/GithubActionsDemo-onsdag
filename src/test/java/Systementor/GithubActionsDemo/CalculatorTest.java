@@ -21,7 +21,7 @@ class CalculatorTest {
     @Test
     void addShouldReturn3() {
         int result = calculator.add(a,b);
-        assertEquals(3,result);
+        assertEquals(3,result + 1);
     }
     @Test
     void addShouldReturn3_withLogger(){
@@ -35,7 +35,7 @@ class CalculatorTest {
             System.out.println("3- Logger: Success! Expected 3 and got: " + result);
         }
         catch (AssertionError e) {
-            logger.info("3- Logger: Test failed! Expected 3 but got: " + result);
+            logger.severe("3- Logger: Test failed! Expected 3 but got: " + result);
             throw e;
         }
     }
